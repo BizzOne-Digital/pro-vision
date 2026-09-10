@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+:root {
+  --color-navy: #062b4a;
+  --color-navy-dark: #031d33;
+  --color-blue-deep: #064c7b;
+  --color-blue-bright: #078be7;
+  --color-cyan: #16c8d7;
+  --color-cyan-light: #87edf0;
+  --color-off-white: #f7fafc;
+  --color-bg-light-blue: #eff7fc;
+  --color-border: #dce8f0;
+  --color-text: #102a43;
+  --color-text-muted: #627d98;
+  --color-white: #ffffff;
+  --gradient-primary: linear-gradient(135deg, #064c7b 0%, #078be7 55%, #16c8d7 100%);
+}
+
+@theme inline {
+  --color-navy: var(--color-navy);
+  --color-navy-dark: var(--color-navy-dark);
+  --color-blue-deep: var(--color-blue-deep);
+  --color-blue-bright: var(--color-blue-bright);
+  --color-cyan: var(--color-cyan);
+  --color-cyan-light: var(--color-cyan-light);
+  --color-off-white: var(--color-off-white);
+  --color-bg-light-blue: var(--color-bg-light-blue);
+  --color-border: var(--color-border);
+  --color-text: var(--color-text);
+  --color-text-muted: var(--color-text-muted);
+  --font-heading: var(--font-playfair);
+  --font-body: var(--font-inter);
+}
+
+body {
+  background: var(--color-white);
+  color: var(--color-text);
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), Georgia, serif;
+}
+
+.bg-gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.text-gradient-primary {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background: var(--color-cyan);
+  color: var(--color-navy-dark);
+}
+
+.container-page {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .container-page {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

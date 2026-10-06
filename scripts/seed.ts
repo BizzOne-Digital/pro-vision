@@ -135,8 +135,7 @@ async function seed() {
       nmlsNumber: "1190997",
       email: "john@pro-visionteam.com",
       phone: "5616990393",
-      image:
-        "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&crop=faces&w=800&h=1000&q=80",
+      image: "/john-lodato.jpg",
       sortOrder: 0,
     });
     console.log("Created default team member: John Lodato.");
